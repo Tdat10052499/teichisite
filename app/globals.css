@@ -1,26 +1,63 @@
+/* Hallmark · macrostructure: Marquee Hero · H1 hero knobs: alignment=center
+ * theme: studied-DNA (source: https://phantom.com/) · paper oklch(0.15 0.02 280) · accent purple (oklch(0.65 0.20 300))
+ * display: soft geometric sans (Geist) · body: soft geometric sans (Geist)
+ * studied: yes · DNA-source: public-reference
+ */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core Palette (Phantom Dark Purple Vibe) */
+  --color-paper-1: oklch(0.12 0.02 290); /* Very dark purple-black */
+  --color-paper-2: oklch(0.16 0.03 290); /* Elevated surface */
+  --color-paper-3: oklch(0.20 0.04 290); /* Hover/Border */
+  
+  --color-ink-1: oklch(0.98 0 0); /* Pure white/off-white */
+  --color-ink-2: oklch(0.75 0.01 290); /* Soft secondary text */
+  --color-ink-3: oklch(0.55 0.02 290); /* Muted text */
+  
+  /* Phantom Purple Accent */
+  --color-accent: oklch(0.70 0.18 300); 
+  --color-accent-hover: oklch(0.75 0.18 300);
+  --color-accent-wash: oklch(0.25 0.08 300);
+  
+  --color-focus: var(--color-accent);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--color-paper-1);
+  --color-surface: var(--color-paper-2);
+  --color-border: var(--color-paper-3);
+  --color-ink: var(--color-ink-1);
+  --color-ink-subtle: var(--color-ink-2);
+  --color-ink-muted: var(--color-ink-3);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-wash: var(--color-accent-wash);
+  
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-display: var(--font-geist-sans), sans-serif; /* Using Geist as the soft geometric */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background-color: var(--color-paper-1);
+  color: var(--color-ink-1);
+  /* Hallmark layout rule: no horizontal scroll */
+  overflow-x: clip; 
+  /* Hallmark typography rule */
+  font-family: var(--font-sans);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Base resets */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-style: normal; /* No italic headers */
+  font-weight: 600;
+  letter-spacing: -0.03em; /* Tighter tracking for display */
+}
+
+/* Ensure no default focus ring, use custom */
+*:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
