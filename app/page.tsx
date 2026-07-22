@@ -1,9 +1,51 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { Terminal, ArrowUpRight, CheckCircle2, Shield, Zap, Code2, Globe } from "lucide-react";
 
 /* Hallmark · macrostructure: Marquee Hero · theme: studied-DNA (source: https://phantom.com/) · nav: N1 Standard · footer: Ft1 Minimal */
+
+function HeroVideoMockup() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Link animation directly to scroll position
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    // Animation starts when the top of the component hits the bottom of the viewport
+    // Animation ends when the center of the component hits the center of the viewport
+    offset: ["start end", "center center"]
+  });
+
+  // Scale from 0.6 to 1.0 as the user scrolls for a more dramatic zoom
+  const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
+
+  // When scroll animation is finished (scale reaches 1), play video
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest >= 0.99 && videoRef.current && videoRef.current.paused) {
+      videoRef.current.play().catch(() => {});
+    }
+  });
+
+  return (
+    <motion.div 
+      ref={containerRef}
+      style={{ scale, opacity }}
+      className="mt-20 w-[95vw] max-w-7xl aspect-video rounded-[2rem] sm:rounded-[3rem] bg-surface/50 border border-border/50 shadow-2xl overflow-hidden relative flex items-center justify-center origin-center"
+    >
+      <video 
+        ref={videoRef}
+        src="/videos/UniHackfest%202026%20Introduce.mp4"
+        className="absolute inset-0 w-full h-full object-cover"
+        muted
+        loop
+        playsInline
+      />
+    </motion.div>
+  );
+}
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
@@ -128,25 +170,7 @@ export default function Home() {
           </motion.div>
 
           {/* Hero Visual Mockup */}
-          <motion.div 
-            initial={{ opacity: 0, y: 100, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 150, damping: 25 }}
-            className="mt-20 w-full max-w-5xl aspect-video rounded-[2rem] bg-gradient-to-br from-surface to-paper border border-border/50 shadow-2xl overflow-hidden relative flex items-center justify-center group"
-          >
-            {/* Abstract geometric visualization to replace video */}
-            <div className="absolute inset-0 bg-accent/5 opacity-50 group-hover:opacity-100 transition-opacity duration-1000"></div>
-            <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-accent/20 blur-[100px] rounded-full"></div>
-            <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-accent/20 blur-[100px] rounded-full"></div>
-            
-            <div className="relative z-10 flex flex-col items-center gap-6 p-8 rounded-2xl bg-paper/50 backdrop-blur-xl border border-border/50">
-              <Code2 className="w-16 h-16 text-accent" />
-              <div className="font-mono text-ink text-sm text-center">
-                status: <span className="text-accent">synced</span><br/>
-                block: 19482910
-              </div>
-            </div>
-          </motion.div>
+          <HeroVideoMockup />
         </section>
 
         {/* Features / Services (Phantom F3 style) */}
