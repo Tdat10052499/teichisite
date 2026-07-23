@@ -107,7 +107,7 @@ export default function SolanaProjects() {
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/navlink:w-full"></span>
           </Link>
           <div className="relative group">
-            <button className="relative text-accent hover:text-[#14F195] transition-colors flex items-center gap-1 cursor-pointer py-1 group/navbtn">
+            <button className="relative text-[#14F195] hover:text-[#14F195] transition-colors flex items-center gap-1 cursor-pointer py-1 group/navbtn">
               Projects 
               <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform duration-200" />
               <span className="absolute bottom-0 left-0 w-[100%] h-[2px] bg-[#14F195] transition-all duration-300 ease-out"></span>
