@@ -461,7 +461,7 @@ export default function Home() {
                   Official Website
                   <ArrowUpRight className="w-4 h-4 text-ink-dim group-hover/link:text-[#14F195] transition-colors" />
                 </a>
-                <a href="/projects?ecosystem=solana" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-surface border border-border/50 text-ink hover:bg-border transition-colors font-medium text-sm shadow-sm">
+                <a href="/projects/solana" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-surface border border-border/50 text-ink hover:bg-border transition-colors font-medium text-sm shadow-sm">
                   View My Projects
                 </a>
               </div>
@@ -578,7 +578,7 @@ export default function Home() {
                   Official Website
                   <ArrowUpRight className="w-4 h-4 text-ink-dim group-hover/link:text-[#4CA2FF] transition-colors" />
                 </a>
-                <a href="/projects?ecosystem=sui" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-surface border border-border/50 text-ink hover:bg-border transition-colors font-medium text-sm shadow-sm">
+                <a href="/projects/sui" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-surface border border-border/50 text-ink hover:bg-border transition-colors font-medium text-sm shadow-sm">
                   View My Projects
                 </a>
               </div>
