@@ -85,7 +85,7 @@ export default function Blogs() {
           <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-paper">
             <Terminal className="w-4 h-4" />
           </div>
-          <span className="font-display font-semibold text-lg tracking-tight">Teichi.DEV</span>
+          <span className="font-display font-semibold text-lg tracking-tight">Teichi_Web3</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8 font-sans text-sm font-medium">
