@@ -223,6 +223,42 @@ function GlobalCursor() {
   );
 }
 
+const typewriterContainer = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.05 }
+  }
+};
+
+const typewriterChar = {
+  hidden: { opacity: 0, display: "none" },
+  visible: { opacity: 1, display: "inline-block" }
+};
+
+const Typewriter = ({ text, className = "" }: { text: string, className?: string }) => {
+  return (
+    <motion.h2
+      variants={typewriterContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      className={`font-display font-semibold ${className}`}
+    >
+      {text.split("").map((char, i) => (
+        <motion.span key={i} variants={typewriterChar}>
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+      <motion.span
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+        className="inline-block w-[10px] h-[1em] bg-accent ml-2 align-middle translate-y-[-0.1em]"
+      />
+    </motion.h2>
+  );
+};
+
 export default function Home() {
   const { scrollY } = useScroll();
   const [navHidden, setNavHidden] = useState(false);
@@ -386,19 +422,7 @@ export default function Home() {
 
         {/* Platforms / Ecosystems */}
         <div id="ecosystems" className="py-24 space-y-32">
-          <motion.h2 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="text-4xl md:text-5xl font-display font-semibold text-center flex flex-wrap justify-center gap-x-[0.3em]"
-          >
-            {["Ecosystems", "I", "build", "on."].map((word, i) => (
-              <span key={i} className="overflow-hidden inline-block pb-4 -mb-4">
-                <motion.span className="inline-block" variants={slideUpVariant}>{word}</motion.span>
-              </span>
-            ))}
-          </motion.h2>
+          <Typewriter text="Ecosystems I build on." className="text-4xl md:text-5xl text-center" />
           
           {/* Solana Section */}
           <section className="flex flex-col md:flex-row items-center gap-12 md:gap-20 max-w-7xl mx-auto">
@@ -564,19 +588,7 @@ export default function Home() {
 
         {/* Experience Section */}
         <section id="experience" className="py-24 max-w-4xl mx-auto w-full px-6">
-          <motion.h2 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="mb-12 text-4xl md:text-5xl font-display font-semibold text-ink flex flex-wrap gap-x-[0.3em]"
-          >
-            {["Experience"].map((word, i) => (
-              <span key={i} className="overflow-hidden inline-block pb-4 -mb-4">
-                <motion.span className="inline-block" variants={slideUpVariant}>{word}</motion.span>
-              </span>
-            ))}
-          </motion.h2>
+          <Typewriter text="Experience" className="mb-12 text-4xl md:text-5xl text-ink" />
 
           <div className="flex flex-col">
             {[
@@ -613,19 +625,7 @@ export default function Home() {
 
         {/* Social Media Bento Grid */}
         <section className="py-24 max-w-5xl mx-auto w-full px-6">
-          <motion.h2 
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="mb-12 text-4xl md:text-5xl font-display font-semibold text-ink text-center flex flex-wrap justify-center gap-x-[0.3em]"
-          >
-            {["Connect", "with", "me"].map((word, i) => (
-              <span key={i} className="overflow-hidden inline-block pb-4 -mb-4">
-                <motion.span className="inline-block" variants={slideUpVariant}>{word}</motion.span>
-              </span>
-            ))}
-          </motion.h2>
+          <Typewriter text="Connect with me" className="mb-12 text-4xl md:text-5xl text-ink text-center" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]">
             {/* Blogs - Wide */}
