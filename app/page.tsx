@@ -627,7 +627,7 @@ export default function Home() {
         <section className="py-24 max-w-5xl mx-auto w-full px-6">
           <Typewriter text="Connect with me" className="mb-12 text-4xl md:text-5xl text-ink text-center" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-[240px]">
             {/* Blogs - Wide */}
             <motion.a 
               href="#"
@@ -650,7 +650,8 @@ export default function Home() {
 
             {/* YouTube */}
             <motion.a 
-              href="#"
+              href="https://www.youtube.com/@Te1chi-j9c"
+              target="_blank" rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -669,7 +670,8 @@ export default function Home() {
 
             {/* Facebook */}
             <motion.a 
-              href="#"
+              href="https://www.facebook.com/dat.du.981707/"
+              target="_blank" rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -686,72 +688,67 @@ export default function Home() {
               <ArrowUpRight className="absolute bottom-8 right-8 w-6 h-6 text-blue-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out" />
             </motion.a>
 
-            {/* Instagram */}
-            <motion.a 
-              href="#"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="md:col-span-1 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
-            >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-pink-500/20 blur-[60px] rounded-none pointer-events-none group-hover:opacity-100 transition-opacity opacity-0"></div>
-              <div className="w-12 h-12 rounded-none bg-surface border border-border/50 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform">
-                <svg className="w-5 h-5 text-ink" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-display font-medium text-ink">Instagram</h3>
-              </div>
-              <ArrowUpRight className="absolute bottom-8 right-8 w-6 h-6 text-pink-500 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out" />
-            </motion.a>
-
-            {/* Tiktok */}
-            <motion.a 
-              href="#"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="md:col-span-1 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
-            >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-400/20 blur-[60px] rounded-none pointer-events-none group-hover:opacity-100 transition-opacity opacity-0"></div>
-              <div className="w-12 h-12 rounded-none bg-surface border border-border/50 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform">
-                <svg className="w-5 h-5 text-ink" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-1.15 4.39-2.91 5.79-1.84 1.43-4.32 1.83-6.52 1.25-2.09-.55-3.88-2.07-4.68-4.07-.79-1.99-.6-4.35.45-6.2 1.09-1.93 3.12-3.32 5.31-3.6 1.08-.14 2.18-.08 3.23.2v4.18c-.89-.25-1.86-.23-2.73.08-.85.31-1.61.96-2.01 1.75-.41.8-.41 1.76-.03 2.56.39.81 1.15 1.45 2.02 1.71.93.28 1.96.18 2.82-.24.77-.38 1.4-1.07 1.66-1.89.24-.76.24-1.58.24-2.37.01-4.73-.01-9.45.01-14.18z"/></svg>
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-display font-medium text-ink">TikTok</h3>
-              </div>
-              <ArrowUpRight className="absolute bottom-8 right-8 w-6 h-6 text-cyan-400 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out" />
-            </motion.a>
-
           </div>
         </section>
 
-        {/* Large Feature / Security (Phantom style) */}
-        <section id="security" className="py-24">
+        {/* Collab Contact Card (Terminal / Web3 Style) */}
+        <section id="contact" className="py-24">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
-            className="max-w-6xl mx-auto bg-gradient-to-br from-surface to-paper rounded-none p-10 md:p-20 border border-border/50 text-center flex flex-col items-center relative overflow-hidden"
+            className="max-w-4xl mx-auto bg-surface/50 backdrop-blur-xl rounded-none p-10 md:p-16 border border-[#9945FF]/30 text-center flex flex-col items-center relative overflow-hidden group shadow-[0_0_80px_rgba(153,69,255,0.05)] hover:shadow-[0_0_80px_rgba(153,69,255,0.15)] transition-all duration-500"
           >
-            {/* Background Glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent/10 blur-[120px] rounded-none pointer-events-none"></div>
+            {/* Background Glows */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#9945FF] to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#9945FF]/10 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#9945FF]/20 transition-colors duration-700"></div>
+            
+            {/* Minimal Code UI Decorator */}
+            <div className="absolute top-4 left-4 flex gap-2 opacity-30">
+              <div className="w-2 h-2 bg-red-500 rounded-none"></div>
+              <div className="w-2 h-2 bg-yellow-500 rounded-none"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-none"></div>
+            </div>
 
-            <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 relative z-10">
-              Controlled by you,<br /> secured by code.
+            <h2 className="text-3xl md:text-5xl font-display font-semibold mb-4 relative z-10 text-ink">
+              Would you like to work with Teichi_Web3?
             </h2>
-            <p className="text-xl text-ink-subtle max-w-2xl mb-12 relative z-10">
-              Every contract is built with security first. I follow strict testing 
-              protocols and integrate with top-tier auditing workflows.
+            <p className="text-lg text-ink-subtle max-w-2xl mb-10 relative z-10 font-sans">
+              I'm always open to collaborating on exciting Web3 projects, speaking at events, or mentoring developers. Let's build something amazing together!
             </p>
-            <a 
-              href="#contact"
-              className="px-8 py-4 rounded-none bg-ink text-paper hover:bg-ink-subtle font-sans text-base font-medium transition-transform active:scale-95 flex items-center gap-2 relative z-10"
-            >
-              See process <ArrowUpRight className="w-4 h-4" />
+            
+            {/* Email Box */}
+            <a href="mailto:tdat.100524@gmail.com" className="relative z-10 flex items-center justify-center bg-[#111] border border-border/50 hover:border-[#9945FF]/50 transition-colors px-6 py-4 rounded-none mb-10 w-full max-w-md group/email cursor-pointer">
+              <svg className="w-5 h-5 text-ink-dim group-hover/email:text-[#9945FF] transition-colors mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="font-mono text-sm text-ink group-hover/email:text-[#9945FF] transition-colors">tdat.100524@gmail.com</span>
             </a>
+
+            {/* Social Icons row */}
+            <div className="relative z-10 flex flex-wrap justify-center gap-4">
+              {/* YouTube */}
+              <a href="https://www.youtube.com/@Te1chi-j9c" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface border border-border/50 hover:border-red-500 hover:text-red-500 text-ink transition-colors rounded-none flex items-center justify-center">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              {/* X / Twitter */}
+              <a href="https://x.com/tuan_da1" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface border border-border/50 hover:border-ink hover:text-ink text-ink-subtle transition-colors rounded-none flex items-center justify-center">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+              </a>
+              {/* Telegram */}
+              <a href="https://t.me/Te1chi" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface border border-border/50 hover:border-blue-400 hover:text-blue-400 text-ink transition-colors rounded-none flex items-center justify-center">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.896-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              </a>
+              {/* GitHub */}
+              <a href="https://github.com/Tdat10052499" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface border border-border/50 hover:border-ink hover:text-ink text-ink transition-colors rounded-none flex items-center justify-center">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              {/* Facebook */}
+              <a href="https://www.facebook.com/dat.du.981707/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-surface border border-border/50 hover:border-blue-500 hover:text-blue-500 text-ink transition-colors rounded-none flex items-center justify-center">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
           </motion.div>
         </section>
 
