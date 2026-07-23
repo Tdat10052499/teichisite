@@ -140,7 +140,7 @@ function HeroVideoMockup() {
   );
 }
 
-const fadeInUp = {
+const fadeInUp: any = {
   hidden: { opacity: 0, y: 40 },
   visible: { 
     opacity: 1, 
@@ -149,7 +149,7 @@ const fadeInUp = {
   }
 };
 
-const slideUpVariant = {
+const slideUpVariant: any = {
   hidden: { y: "120%" },
   visible: { 
     y: "0%", 
