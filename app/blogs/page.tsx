@@ -107,18 +107,18 @@ export default function Blogs() {
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
               <div className="w-36 bg-surface/90 backdrop-blur-xl border-0 rounded-none shadow-2xl opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 flex flex-col p-1.5 z-50">
-                <a href="/#ecosystems" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
+                <a href="/projects/solana" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
                   Solana
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </a>
-                <a href="/#ecosystems" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
+                <a href="/projects/sui" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
                   Sui
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </a>
               </div>
             </div>
           </div>
-          <a href="/#experience" className="relative text-ink hover:text-accent transition-colors py-1 group/navlink">
+          <a href="/about" className="relative text-ink hover:text-accent transition-colors py-1 group/navlink">
             About me
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/navlink:w-full"></span>
           </a>

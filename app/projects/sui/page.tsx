@@ -124,9 +124,9 @@ export default function SuiProjects() {
               </div>
             </div>
           </div>
-          <Link href="/#experience" className="relative text-ink hover:text-accent transition-colors py-1 group/navlink">
+          <Link href="/about" className="relative text-ink hover:text-accent transition-colors py-1 group/navlink">
             About me
-            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#4CA2FF] transition-all duration-300 ease-out group-hover/navlink:w-full"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/navlink:w-full"></span>
           </Link>
         </nav>
         
