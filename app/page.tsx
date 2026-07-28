@@ -340,9 +340,9 @@ export default function Home() {
                   Solana
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#14F195] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </a>
-                <a href="/projects/sui" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
-                  Sui
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#4CA2FF] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
+                <a href="/projects/in-development" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
+                  In development
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-ink transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </a>
               </div>
             </div>
@@ -507,7 +507,7 @@ export default function Home() {
             </motion.div>
           </section>
 
-          {/* SUI Section */}
+          {/* In Development Section */}
           <section className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20 max-w-7xl mx-auto">
             {/* Visual Side */}
             <motion.div 
@@ -518,34 +518,31 @@ export default function Home() {
               className="flex-1 w-full"
             >
               <div className="aspect-[4/3] sm:aspect-square md:aspect-[4/3] rounded-none border border-border/50 relative flex items-center justify-center overflow-hidden bg-surface/30">
-                 {/* Animated Gradient Glows (Sui) */}
+                 {/* Animated Gradient Glows (Neutral) */}
                  <motion.div 
-                   animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3], x: [0, 50, 0], y: [0, 50, 0] }}
+                   animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.3, 0.1], x: [0, 50, 0], y: [0, 50, 0] }}
                    transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-                   className="absolute top-0 left-0 w-3/4 h-3/4 bg-[radial-gradient(circle,rgba(76,162,255,0.4)_0%,transparent_70%)] rounded-none pointer-events-none will-change-transform transform-gpu"
+                   className="absolute top-0 left-0 w-3/4 h-3/4 bg-[radial-gradient(circle,rgba(255,255,255,0.4)_0%,transparent_70%)] rounded-none pointer-events-none will-change-transform transform-gpu"
                  />
                  <motion.div 
-                   animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.6, 0.3], x: [0, -50, 0], y: [0, -50, 0] }}
+                   animate={{ scale: [1, 1.4, 1], opacity: [0.1, 0.3, 0.1], x: [0, -50, 0], y: [0, -50, 0] }}
                    transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                   className="absolute bottom-0 right-0 w-3/4 h-3/4 bg-[radial-gradient(circle,rgba(2,132,173,0.4)_0%,transparent_70%)] rounded-none pointer-events-none will-change-transform transform-gpu"
+                   className="absolute bottom-0 right-0 w-3/4 h-3/4 bg-[radial-gradient(circle,rgba(150,150,150,0.4)_0%,transparent_70%)] rounded-none pointer-events-none will-change-transform transform-gpu"
                  />
 
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 sm:w-3/4 h-3/4 bg-[#111111]/80 backdrop-blur-2xl rounded-none border border-white/10 shadow-2xl flex flex-col overflow-hidden z-10">
                     {/* Mock Code window */}
                     <div className="h-10 border-b border-white/5 bg-[#1A1A1A] flex items-center px-4 gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-                      <div className="ml-4 text-xs font-mono text-white/30">Move Contract</div>
+                      <div className="w-3 h-3 rounded-full bg-white/20"></div>
+                      <div className="w-3 h-3 rounded-full bg-white/20"></div>
+                      <div className="w-3 h-3 rounded-full bg-white/20"></div>
+                      <div className="ml-4 text-xs font-mono text-white/30">system_log.sh</div>
                     </div>
                     <div className="p-6 font-mono text-sm md:text-base text-white/70 flex-1 overflow-hidden">
-                      <span className="text-[#4CA2FF]">module</span> my_package::sui_logic {"{"}<br/><br/>
-                      &nbsp;&nbsp;<span className="text-[#4CA2FF]">use</span> sui::object::{"{Self, UID}"};<br/>
-                      &nbsp;&nbsp;<span className="text-[#4CA2FF]">use</span> sui::transfer;<br/><br/>
-                      &nbsp;&nbsp;<span className="text-[#4CA2FF]">public struct</span> Asset <span className="text-[#4CA2FF]">has</span> key {"{"}<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;id: UID,<br/>
-                      &nbsp;&nbsp;{"}"}<br/>
-                      {"}"}
+                      <span className="text-white/40">{">"}</span> <span className="text-ink">Initializing new environments...</span><br/><br/>
+                      <span className="text-white/40">{">"}</span> <span className="text-ink">Loading dependencies</span> <span className="animate-pulse">...</span><br/><br/>
+                      <span className="text-white/40">{">"}</span> <span className="text-ink">Building knowledge base [25%]</span><br/><br/>
+                      <span className="text-white/40">{">"}</span> <span className="text-ink opacity-50">Awaiting compilation...</span>
                     </div>
                  </div>
               </div>
@@ -561,25 +558,20 @@ export default function Home() {
             >
               <div className="relative mb-8">
                 {/* Logo Glow */}
-                <div className="absolute inset-0 bg-[#4CA2FF] blur-[30px] rounded-none opacity-40 animate-pulse"></div>
+                <div className="absolute inset-0 bg-white blur-[30px] rounded-none opacity-20 animate-pulse"></div>
                 
                 <div className="w-16 h-16 rounded-full bg-surface/80 backdrop-blur-xl border border-border/50 flex items-center justify-center shadow-lg relative z-10">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.636 10.009a7.16 7.16 0 0 1 1.565 4.474 7.2 7.2 0 0 1-1.608 4.53l-.087.106-.023-.135a7 7 0 0 0-.07-.349c-.502-2.21-2.142-4.106-4.84-5.642-1.823-1.034-2.866-2.278-3.14-3.693-.177-.915-.046-1.834.209-2.62.254-.787.631-1.446.953-1.843l1.05-1.284a.46.46 0 0 1 .713 0l5.28 6.456zm1.66-1.283L12.26.123a.336.336 0 0 0-.52 0L4.704 8.726l-.023.029a9.33 9.33 0 0 0-2.07 5.872C2.612 19.803 6.816 24 12 24s9.388-4.197 9.388-9.373a9.32 9.32 0 0 0-2.07-5.871zM6.389 9.981l.63-.77.018.142q.023.17.055.34c.408 2.136 1.862 3.917 4.294 5.297 2.114 1.203 3.345 2.586 3.7 4.103a5.3 5.3 0 0 1 .109 1.801l-.004.034-.03.014A7.2 7.2 0 0 1 12 21.67c-3.976 0-7.2-3.218-7.2-7.188 0-1.705.594-3.27 1.587-4.503z" fill="#4CA2FF"/>
-                  </svg>
+                  <Terminal className="w-8 h-8 text-ink" />
                 </div>
               </div>
-              <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 text-ink">Sui</h2>
+              <h2 className="text-4xl md:text-5xl font-display font-semibold mb-6 text-ink">In Development</h2>
               <p className="text-ink-dim text-lg mb-10 leading-relaxed max-w-xl">
-                Next-generation smart contracts with Move. Building highly interactive, object-centric applications with sub-second finality and dynamic assets.
+                Exploring new horizons. I am constantly expanding my knowledge base and learning to build on other decentralized platforms.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://sui.io" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-paper border border-border text-ink hover:text-white hover:border-[#4CA2FF]/50 transition-colors font-medium text-sm group/link shadow-sm">
-                  Official Website
-                  <ArrowUpRight className="w-4 h-4 text-ink-dim group-hover/link:text-[#4CA2FF] transition-colors" />
-                </a>
-                <a href="/projects/sui" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-surface border border-border/50 text-ink hover:bg-border transition-colors font-medium text-sm shadow-sm">
-                  View My Projects
+                <a href="/projects/in-development" className="flex items-center justify-center gap-2 px-6 py-3 rounded-none bg-paper border border-border text-ink hover:bg-white/5 transition-colors font-medium text-sm shadow-sm group/btn">
+                  View Progress
+                  <ArrowUpRight className="w-4 h-4 text-ink-dim group-hover/btn:text-ink transition-colors" />
                 </a>
               </div>
             </motion.div>
@@ -594,7 +586,7 @@ export default function Home() {
             {[
               { role: "Founder", company: "EduOrigo Solutions" },
               { role: "Leader", company: "EduOrigo Solutions", desc: "[Unihackfest 2026]" },
-              { role: "Leader", company: "Sui Harvest", desc: "[Sui Learning Tour 2025]" },
+              { role: "Leader", company: "Learning & Exploring", desc: "[Web3 Tour 2025]" },
               { role: "Student", company: "Văn Lang University" },
             ].map((exp, index) => (
               <motion.div 

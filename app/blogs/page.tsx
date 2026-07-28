@@ -111,9 +111,9 @@ export default function Blogs() {
                   Solana
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </a>
-                <a href="/projects/sui" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
-                  Sui
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
+                <a href="/projects/in-development" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
+                  In development
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-ink transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </a>
               </div>
             </div>

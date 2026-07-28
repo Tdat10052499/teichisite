@@ -118,9 +118,9 @@ export default function SolanaProjects() {
                   Solana
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#14F195] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </Link>
-                <Link href="/projects/sui" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
-                  Sui
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#4CA2FF] transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
+                <Link href="/projects/in-development" className="relative block px-3 py-2.5 rounded-none hover:bg-white/5 text-sm transition-colors text-ink group/dropitem overflow-hidden">
+                  In development
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-ink transition-all duration-300 ease-out group-hover/dropitem:w-full"></span>
                 </Link>
               </div>
             </div>
