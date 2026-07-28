@@ -584,7 +584,6 @@ export default function Home() {
 
           <div className="flex flex-col">
             {[
-              { role: "Founder", company: "EduOrigo Solutions" },
               { role: "Leader", company: "EduOrigo Solutions", desc: "[Unihackfest 2026]" },
               { role: "Leader", company: "Learning & Exploring", desc: "[Web3 Tour 2025]" },
               { role: "Student", company: "Văn Lang University" },
