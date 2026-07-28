@@ -4,7 +4,47 @@ import { motion } from "framer-motion";
 import { Terminal, ChevronDown, ArrowUpRight, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Typewriter } from "@/components/ui/typewriter";
+const typewriterContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const typewriterChar = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", damping: 12, stiffness: 100 },
+  },
+};
+
+const Typewriter = ({ text, className = "" }: { text: string, className?: string }) => {
+  return (
+    <motion.h2
+      variants={typewriterContainer as any}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      className={`font-display font-semibold ${className}`}
+    >
+      {text.split("").map((char, i) => (
+        <motion.span key={i} variants={typewriterChar as any}>
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+      <motion.span
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
+        className="inline-block w-[10px] h-[1em] bg-accent ml-2 align-middle translate-y-[-0.1em]"
+      />
+    </motion.h2>
+  );
+};
 
 export default function InDevelopment() {
   const [navHidden, setNavHidden] = useState(false);
