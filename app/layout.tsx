@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Web3 Blockchain Developer",
+  title: "Teichi_WEB3",
   description: "Portfolio of a Web3 Blockchain Developer specializing in Smart Contracts, dApps, and DeFi protocols.",
 };
 
