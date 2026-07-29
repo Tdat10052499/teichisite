@@ -135,7 +135,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="w-full relative flex flex-col md:flex-row items-end justify-between pt-16 px-8 md:px-12 lg:px-16 min-h-[500px]"
+              className="w-full relative flex flex-col md:flex-row items-center justify-between px-8 md:px-12 lg:px-16 min-h-[450px] md:h-[400px] mt-10 md:mt-16 mb-16"
             >
               {/* Background Card with overflow hidden */}
               <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-white/5 overflow-hidden shadow-2xl z-0">
@@ -145,21 +145,21 @@ export default function AboutPage() {
               </div>
 
               {/* Text Content */}
-              <div className="relative z-10 flex-1 pb-16 md:pb-24 w-full text-center md:text-left flex flex-col justify-end mt-12 md:mt-0">
-                <h1 className="text-[2.5rem] sm:text-5xl md:text-[3.5rem] lg:text-6xl xl:text-[5rem] font-display font-semibold text-ink leading-[1.1] tracking-tight mb-6 md:whitespace-nowrap">
+              <div className="relative z-10 flex-1 w-full text-center md:text-left flex flex-col justify-center pt-12 md:pt-0">
+                <h1 className="text-[2.5rem] sm:text-5xl md:text-[3.5rem] lg:text-[4.5rem] xl:text-[5.5rem] font-display font-semibold text-white leading-[1.1] tracking-tight mb-4 md:whitespace-nowrap">
                   Hồ Du Tuấn Đạt
                 </h1>
                 <Typewriter text="TEICHI_WEB3" className="text-xl md:text-2xl font-mono text-[#14F195] tracking-widest uppercase opacity-90" />
               </div>
 
               {/* Image Content */}
-              <div className="relative z-10 w-64 md:w-[450px] h-[350px] md:h-[600px] flex items-end justify-center -mb-4 md:-mb-8 mx-auto md:mx-0 md:-mt-16 pointer-events-none">
+              <div className="relative z-10 w-full md:w-[450px] h-[350px] md:absolute md:right-8 lg:right-16 md:top-1/2 md:-translate-y-1/2 md:h-[130%] flex items-center justify-center pointer-events-none mt-8 md:mt-0">
                 <Image 
                   src="/images/Hero.png" 
                   alt="Hồ Du Tuấn Đạt" 
                   width={600} 
-                  height={600}
-                  className="object-contain object-bottom w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] md:scale-110 origin-bottom"
+                  height={800}
+                  className="object-contain object-center w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] md:scale-110"
                   priority
                 />
               </div>
