@@ -223,8 +223,7 @@ export default function SolanaProjects() {
                 </h4>
                 <div className="text-ink-dim text-sm max-w-2xl space-y-4">
                   <p>
-                    <strong className="text-ink font-semibold">📝 Description:</strong><br/>
-                    This project is a decentralized escrow platform built on the Solana network. The smart contract acts as an unbiased, code-based third party, allowing two entities to securely exchange digital assets without needing to trust one another. By leveraging Program Derived Addresses (PDAs), the protocol ensures absolute transparency—no single entity holds the Private Key to the Vault, and assets are strictly released only when exact transaction conditions are met.
+                    A trustless, on-chain escrow smart contract built on Solana. It acts as an unbiased, code-based intermediary, utilizing PDAs to ensure secure and transparent asset exchanges between two untrusting parties.
                   </p>
                   <p>
                     <strong className="text-ink font-semibold">⚙️ Tech Stack:</strong><br/>
