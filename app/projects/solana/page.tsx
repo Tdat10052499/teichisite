@@ -177,19 +177,19 @@ export default function SolanaProjects() {
         {/* Projects Bento Grid */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 auto-rows-[340px]">
           
-          {/* Project 1: Large Featured */}
+          {/* Project 1: Escrow Protocol */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="lg:col-span-2 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
+            className="lg:col-span-3 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#14F195]/10 blur-[80px] rounded-full pointer-events-none group-hover:opacity-100 transition-opacity opacity-0"></div>
             
             <div className="relative z-10 flex flex-col h-full">
               <div className="flex justify-between items-start mb-4">
                 <div className="w-12 h-12 rounded-none bg-[#111] border border-[#14F195]/30 flex items-center justify-center text-[#14F195] font-display font-bold text-xl">
-                  S
+                  E
                 </div>
                 <div className="flex gap-2">
                   <a href="#" className="w-10 h-10 flex items-center justify-center bg-surface border border-border/50 hover:border-[#14F195]/50 hover:text-[#14F195] transition-colors rounded-none">
@@ -204,96 +204,19 @@ export default function SolanaProjects() {
               <div className="mt-auto">
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Rust / Anchor</span>
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Next.js</span>
-                  <span className="px-3 py-1 bg-[#14F195]/10 border border-[#14F195]/20 text-xs font-mono text-[#14F195] rounded-none">Web3.js</span>
+                  <span className="px-3 py-1 bg-[#14F195]/10 border border-[#14F195]/20 text-xs font-mono text-[#14F195] rounded-none">[In development]</span>
                 </div>
-                <h3 className="text-3xl font-display font-semibold text-ink group-hover:text-[#14F195] transition-colors mb-3">
-                  SolaDEX Orderbook
+                <h3 className="text-3xl font-display font-semibold text-ink group-hover:text-[#14F195] transition-colors mb-2">
+                  Trustless On-Chain Escrow Protocol
                 </h3>
-                <p className="text-ink-dim text-sm max-w-md line-clamp-2">
-                  A high-speed, fully on-chain decentralized exchange. Featuring custom matching engines built in Rust, enabling sub-second trade execution directly on Solana.
+                <h4 className="text-xl font-mono text-ink-dim mb-3">
+                  Solana Escrow MVP
+                </h4>
+                <p className="text-ink-dim text-sm max-w-2xl line-clamp-2">
+                  A decentralized, trustless escrow smart contract on Solana. Facilitating secure token exchanges between two parties without intermediaries.
                 </p>
               </div>
             </div>
-          </motion.div>
-
-          {/* Project 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="lg:col-span-1 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-[#9945FF]/20 blur-[60px] rounded-full pointer-events-none group-hover:opacity-100 transition-opacity opacity-0"></div>
-            
-            <div className="relative z-10 flex flex-col h-full">
-              <div className="flex justify-between items-start mb-4">
-                <div className="w-12 h-12 rounded-none bg-[#111] border border-[#9945FF]/30 flex items-center justify-center text-[#9945FF] font-display font-bold text-xl">
-                  N
-                </div>
-                <a href="#" className="w-10 h-10 flex items-center justify-center bg-surface border border-border/50 hover:border-[#9945FF]/50 hover:text-[#9945FF] transition-colors rounded-none">
-                  <Code className="w-5 h-5" />
-                </a>
-              </div>
-              
-              <div className="mt-auto">
-                <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-[#9945FF]/10 border border-[#9945FF]/20 text-xs font-mono text-[#9945FF] rounded-none">Metaplex</span>
-                </div>
-                <h3 className="text-2xl font-display font-semibold text-ink group-hover:text-[#9945FF] transition-colors mb-3">
-                  cNFT Launchpad
-                </h3>
-                <p className="text-ink-dim text-sm line-clamp-3">
-                  An NFT minting platform utilizing state compression. Allows creators to mint thousands of NFTs for fractions of a penny.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Project 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="lg:col-span-1 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-[#14F195]/20 blur-[60px] rounded-full pointer-events-none group-hover:opacity-100 transition-opacity opacity-0"></div>
-            
-            <div className="relative z-10 flex flex-col h-full">
-              <div className="flex justify-between items-start mb-4">
-                <div className="w-12 h-12 rounded-none bg-[#111] border border-[#14F195]/30 flex items-center justify-center text-[#14F195] font-display font-bold text-xl">
-                  P
-                </div>
-                <a href="#" className="w-10 h-10 flex items-center justify-center bg-surface border border-border/50 hover:border-[#14F195]/50 hover:text-[#14F195] transition-colors rounded-none">
-                  <Code className="w-5 h-5" />
-                </a>
-              </div>
-              
-              <div className="mt-auto">
-                <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Solana Pay</span>
-                </div>
-                <h3 className="text-2xl font-display font-semibold text-ink group-hover:text-[#14F195] transition-colors mb-3">
-                  Solana POS
-                </h3>
-                <p className="text-ink-dim text-sm line-clamp-3">
-                  A point-of-sale payment gateway bridging physical merchants with Solana Pay for instant crypto transactions.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Decorative Blank Tile */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="lg:col-span-2 rounded-none border border-border/20 border-dashed p-8 flex flex-col items-center justify-center text-ink-dim/50 font-mono text-sm uppercase tracking-widest relative"
-          >
-            <div className="w-8 h-8 rounded-none border border-ink-dim/30 flex items-center justify-center mb-4">
-              <span className="animate-pulse">+</span>
-            </div>
-            More Protocols Brewing...
           </motion.div>
           
         </div>
