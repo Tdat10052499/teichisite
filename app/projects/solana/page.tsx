@@ -45,7 +45,7 @@ const Typewriter = ({ text, className = "" }: { text: string, className?: string
 export default function SolanaProjects() {
   const { scrollY } = useScroll();
   const [navHidden, setNavHidden] = useState(false);
-  
+
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
     if (latest > previous && latest > 150) {
@@ -57,20 +57,20 @@ export default function SolanaProjects() {
 
   return (
     <div className="flex flex-col min-h-screen bg-paper overflow-hidden relative cursor-default">
-      
+
       {/* Solana Themed Ambient Background */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           animate={{ opacity: [0.15, 0.3, 0.15], scale: [1, 1.1, 1] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle,rgba(153,69,255,0.06)_0%,transparent_70%)] will-change-transform transform-gpu"
         />
-        <motion.div 
+        <motion.div
           animate={{ opacity: [0.1, 0.25, 0.1], scale: [1, 1.2, 1] }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           className="absolute top-[30%] -right-[10%] w-[60vw] h-[60vw] rounded-full bg-[radial-gradient(circle,rgba(20,241,149,0.08)_0%,transparent_70%)] will-change-transform transform-gpu"
         />
-        <motion.div 
+        <motion.div
           animate={{ opacity: [0.1, 0.3, 0.1], scale: [1, 1.15, 1] }}
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 4 }}
           className="absolute -bottom-[20%] left-[20%] w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(153,69,255,0.05)_0%,transparent_70%)] will-change-transform transform-gpu"
@@ -81,7 +81,7 @@ export default function SolanaProjects() {
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_100%_100%_at_50%_0%,#000_30%,transparent_100%)]"></div>
 
       {/* NavBar */}
-      <motion.header 
+      <motion.header
         variants={{
           visible: { y: 0, opacity: 1 },
           hidden: { y: "-100%", opacity: 0 }
@@ -96,7 +96,7 @@ export default function SolanaProjects() {
           </div>
           <span className="font-display font-semibold text-lg tracking-tight">Teichi_Web3</span>
         </div>
-        
+
         <nav className="hidden md:flex items-center gap-8 font-sans text-sm font-medium">
           <Link href="/" className="relative text-ink hover:text-accent transition-colors py-1 group/navlink">
             Home
@@ -108,7 +108,7 @@ export default function SolanaProjects() {
           </Link>
           <div className="relative group">
             <button className="relative text-[#14F195] hover:text-[#14F195] transition-colors flex items-center gap-1 cursor-pointer py-1 group/navbtn">
-              Projects 
+              Projects
               <ChevronDown className="w-4 h-4 opacity-70 group-hover:rotate-180 transition-transform duration-200" />
               <span className="absolute bottom-0 left-0 w-[100%] h-[2px] bg-[#14F195] transition-all duration-300 ease-out"></span>
             </button>
@@ -130,9 +130,9 @@ export default function SolanaProjects() {
             <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#9945FF] transition-all duration-300 ease-out group-hover/navlink:w-full"></span>
           </Link>
         </nav>
-        
-        <Link 
-          href="/#contact" 
+
+        <Link
+          href="/#contact"
           className="px-5 py-2.5 rounded-none bg-ink text-paper hover:bg-ink-subtle font-sans text-sm font-medium transition-transform active:scale-95"
         >
           Contact me !
@@ -141,7 +141,7 @@ export default function SolanaProjects() {
 
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-start relative z-10 px-6 pt-24 pb-32 min-h-screen max-w-7xl mx-auto w-full">
-        
+
         {/* Solana Logo Header */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -151,13 +151,13 @@ export default function SolanaProjects() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-[#9945FF] to-[#14F195] blur-[20px] rounded-full opacity-40 animate-pulse"></div>
           <svg className="w-12 h-12 relative z-10" viewBox="0 0 318 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M49.6585 53.6499L0 83.1812L266.626 83.1812L317.065 53.6499L49.6585 53.6499Z" fill="url(#solana-grad-page)"/>
-            <path d="M267.406 113.626L317.065 143.157L50.4389 143.157L0 113.626L267.406 113.626Z" fill="url(#solana-grad-page)"/>
-            <path d="M49.6585 172.819L0 202.35L266.626 202.35L317.065 172.819L49.6585 172.819Z" fill="url(#solana-grad-page)"/>
+            <path d="M49.6585 53.6499L0 83.1812L266.626 83.1812L317.065 53.6499L49.6585 53.6499Z" fill="url(#solana-grad-page)" />
+            <path d="M267.406 113.626L317.065 143.157L50.4389 143.157L0 113.626L267.406 113.626Z" fill="url(#solana-grad-page)" />
+            <path d="M49.6585 172.819L0 202.35L266.626 202.35L317.065 172.819L49.6585 172.819Z" fill="url(#solana-grad-page)" />
             <defs>
               <linearGradient id="solana-grad-page" x1="28.919" y1="41.1396" x2="280.993" y2="216.734" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#9945FF"/>
-                <stop offset="1" stopColor="#14F195"/>
+                <stop stopColor="#9945FF" />
+                <stop offset="1" stopColor="#14F195" />
               </linearGradient>
             </defs>
           </svg>
@@ -165,7 +165,7 @@ export default function SolanaProjects() {
 
         {/* Hero Title */}
         <Typewriter text="Building on Solana" className="text-5xl md:text-7xl text-ink tracking-tight text-center mb-6" />
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
@@ -173,10 +173,10 @@ export default function SolanaProjects() {
         >
           Explore my portfolio of high-performance decentralized applications built for scale, speed, and incredibly low costs.
         </motion.p>
-        
+
         {/* Projects Bento Grid */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6 auto-rows-[340px]">
-          
+
           {/* Project 1: Escrow Protocol */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -185,7 +185,7 @@ export default function SolanaProjects() {
             className="lg:col-span-3 rounded-none bg-surface/30 border border-border/50 hover:bg-surface/60 transition-all p-8 flex flex-col justify-between relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#14F195]/10 blur-[80px] rounded-full pointer-events-none group-hover:opacity-100 transition-opacity opacity-0"></div>
-            
+
             <div className="relative z-10 flex flex-col h-full">
               <div className="flex justify-between items-start mb-4">
                 <div className="w-12 h-12 rounded-none bg-[#111] border border-[#14F195]/30 flex items-center justify-center text-[#14F195] font-display font-bold text-xl">
@@ -205,7 +205,7 @@ export default function SolanaProjects() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-auto">
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Rust / Anchor</span>
@@ -225,29 +225,13 @@ export default function SolanaProjects() {
                   <p>
                     A trustless, on-chain escrow smart contract built on Solana. It acts as an unbiased, code-based intermediary, utilizing PDAs to ensure secure and transparent asset exchanges between two untrusting parties.
                   </p>
-                  <p>
-                    <strong className="text-ink font-semibold">⚙️ Tech Stack:</strong><br/>
-                    The following tools were selected to optimize both performance and security for this project:<br/>
-                    <span className="block mt-1">
-                      • <strong className="text-white/80">Smart Contract:</strong> Rust combined with the Anchor Framework.
-                    </span>
-                    <span className="block mt-1">
-                      • <strong className="text-white/80">Testing:</strong> Light SVM (An ultra-lightweight Solana Virtual Machine simulator for blazing-fast local testing).
-                    </span>
-                    <span className="block mt-1">
-                      • <strong className="text-white/80">Client Generation:</strong> Kodama (Automatically generates a fully Type-safe TypeScript client from the IDL).
-                    </span>
-                    <span className="block mt-1">
-                      • <strong className="text-white/80">Frontend UI:</strong> Next.js, React, and Solana Kit (For seamless wallet and RPC connection management).
-                    </span>
-                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
-          
+
         </div>
-        
+
       </main>
 
     </div>
