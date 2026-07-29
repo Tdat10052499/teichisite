@@ -135,30 +135,31 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="w-full rounded-[2.5rem] bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-end justify-between pt-16 px-8 md:px-16 min-h-[500px] shadow-2xl"
+              className="w-full relative flex flex-col md:flex-row items-end justify-between pt-16 px-8 md:px-12 lg:px-16 min-h-[500px]"
             >
-              {/* Subtle gradients matching the theme */}
-              <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#9945FF]/15 blur-[100px] pointer-events-none rounded-full"></div>
-              <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#14F195]/10 blur-[120px] pointer-events-none rounded-full"></div>
+              {/* Background Card with overflow hidden */}
+              <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-white/5 overflow-hidden shadow-2xl z-0">
+                {/* Subtle gradients matching the theme */}
+                <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#9945FF]/15 blur-[100px] pointer-events-none rounded-full"></div>
+                <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#14F195]/10 blur-[120px] pointer-events-none rounded-full"></div>
+              </div>
 
               {/* Text Content */}
-              <div className="flex-1 pb-16 md:pb-24 z-10 w-full text-center md:text-left flex flex-col justify-end mt-12 md:mt-0">
-                <h1 className="text-6xl md:text-7xl lg:text-[6rem] font-display font-semibold text-ink leading-[1.05] tracking-tight mb-6">
-                  Hồ Du
-                  <br className="hidden md:block" />
-                  Tuấn Đạt
+              <div className="relative z-10 flex-1 pb-16 md:pb-24 w-full text-center md:text-left flex flex-col justify-end mt-12 md:mt-0">
+                <h1 className="text-[2.5rem] sm:text-5xl md:text-[3.5rem] lg:text-6xl xl:text-[5rem] font-display font-semibold text-ink leading-[1.1] tracking-tight mb-6 md:whitespace-nowrap">
+                  Hồ Du Tuấn Đạt
                 </h1>
                 <Typewriter text="TEICHI_WEB3" className="text-xl md:text-2xl font-mono text-[#14F195] tracking-widest uppercase opacity-90" />
               </div>
 
               {/* Image Content */}
-              <div className="relative z-10 w-64 md:w-[450px] h-[300px] md:h-[500px] flex items-end justify-center -mb-4 md:-mb-8 mx-auto md:mx-0">
+              <div className="relative z-10 w-64 md:w-[450px] h-[350px] md:h-[600px] flex items-end justify-center -mb-4 md:-mb-8 mx-auto md:mx-0 md:-mt-16 pointer-events-none">
                 <Image 
                   src="/images/Hero.png" 
                   alt="Hồ Du Tuấn Đạt" 
                   width={600} 
                   height={600}
-                  className="object-contain object-bottom w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                  className="object-contain object-bottom w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] md:scale-110 origin-bottom"
                   priority
                 />
               </div>
