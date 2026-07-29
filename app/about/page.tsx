@@ -117,98 +117,52 @@ export default function AboutPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-center justify-center text-center"
         >
-          {/* Header */}
-          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-none border border-accent/30 bg-accent/5 text-accent text-sm font-mono mb-8">
-            <Terminal className="w-4 h-4" />
-            <span>WHOAMI</span>
-          </div>
+          {/* Main Hero Card Layout */}
+          <div className="w-full flex flex-col pt-4 pb-12">
+            {/* Top Bar above card */}
+            <div className="flex justify-between items-center mb-6 px-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-none border border-accent/30 bg-accent/5 text-accent text-sm font-mono">
+                <Terminal className="w-4 h-4" />
+                <span>WHOAMI</span>
+              </div>
+              <div className="text-right font-mono text-xs text-ink-dim tracking-widest uppercase hidden md:block">
+                Building<br/>The Future
+              </div>
+            </div>
 
-          <Typewriter text="About Me" className="text-5xl md:text-7xl text-ink mb-16 tracking-tight" />
-
-          {/* Main Layout: Split on desktop, stack on mobile */}
-          <div className="w-full flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
-            
-            {/* Image Container (Hero.png) */}
+            {/* Banner Card */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative group"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="w-full rounded-[2.5rem] bg-gradient-to-br from-[#1A1A1A] to-[#111111] border border-white/5 relative overflow-hidden flex flex-col md:flex-row items-end justify-between pt-16 px-8 md:px-16 min-h-[500px] shadow-2xl"
             >
-              {/* Outer Glowing Border */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#9945FF] to-[#14F195] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
-              
-              <div className="relative w-64 h-64 md:w-80 md:h-80 bg-surface/50 border border-border/50 rounded-none overflow-hidden flex items-center justify-center">
-                {/* Minimal Grid Background */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
-                
-                {/* Image */}
+              {/* Subtle gradients matching the theme */}
+              <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-[#9945FF]/15 blur-[100px] pointer-events-none rounded-full"></div>
+              <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#14F195]/10 blur-[120px] pointer-events-none rounded-full"></div>
+
+              {/* Text Content */}
+              <div className="flex-1 pb-16 md:pb-24 z-10 w-full text-center md:text-left flex flex-col justify-end mt-12 md:mt-0">
+                <h1 className="text-6xl md:text-7xl lg:text-[6rem] font-display font-semibold text-ink leading-[1.05] tracking-tight mb-6">
+                  Hồ Du
+                  <br className="hidden md:block" />
+                  Tuấn Đạt
+                </h1>
+                <Typewriter text="TEICHI_WEB3" className="text-xl md:text-2xl font-mono text-[#14F195] tracking-widest uppercase opacity-90" />
+              </div>
+
+              {/* Image Content */}
+              <div className="relative z-10 w-64 md:w-[450px] h-[300px] md:h-[500px] flex items-end justify-center -mb-4 md:-mb-8 mx-auto md:mx-0">
                 <Image 
                   src="/images/Hero.png" 
-                  alt="Teichi Hero" 
-                  width={320} 
-                  height={320}
-                  className="object-cover relative z-10 scale-110 group-hover:scale-125 transition-transform duration-700"
+                  alt="Hồ Du Tuấn Đạt" 
+                  width={600} 
+                  height={600}
+                  className="object-contain object-bottom w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                   priority
                 />
               </div>
-
-              {/* Decorative Corner Brackets */}
-              <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-accent"></div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-[#14F195]"></div>
-              <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-[#14F195]"></div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-accent"></div>
             </motion.div>
-
-            {/* Updating Status Container */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex-1 max-w-md w-full bg-[#111111]/80 backdrop-blur-2xl rounded-none border border-white/10 shadow-2xl overflow-hidden"
-            >
-              {/* Terminal Header */}
-              <div className="h-10 border-b border-white/5 bg-[#1A1A1A] flex items-center px-4 gap-2">
-                <div className="w-3 h-3 bg-red-500/80 rounded-none"></div>
-                <div className="w-3 h-3 bg-yellow-500/80 rounded-none"></div>
-                <div className="w-3 h-3 bg-green-500/80 rounded-none"></div>
-                <div className="ml-4 text-xs font-mono text-white/40">about_me.txt - Processing</div>
-              </div>
-              
-              {/* Terminal Body */}
-              <div className="p-8 font-mono text-sm md:text-base text-white/80 flex flex-col items-start text-left min-h-[200px] relative">
-                
-                <div className="flex items-center gap-3 text-accent mb-4">
-                  <Terminal className="w-5 h-5" />
-                  <span>Fetching profile data...</span>
-                </div>
-                
-                <div className="space-y-2 mb-8">
-                  <div className="flex items-center gap-2 opacity-50">
-                    <span className="text-green-400">✓</span>
-                    <span>Loaded Hero.png</span>
-                  </div>
-                  <div className="flex items-center gap-2 opacity-50">
-                    <span className="text-green-400">✓</span>
-                    <span>Initialized Web3 Interface</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Loader2 className="w-4 h-4 animate-spin text-yellow-400" />
-                    <span className="text-yellow-400">Compiling background story...</span>
-                  </div>
-                </div>
-                
-                <div className="mt-auto pt-4 border-t border-white/10 w-full flex justify-between items-end">
-                  <div>
-                    <h3 className="text-xl font-display font-medium text-ink">Updating...</h3>
-                    <p className="text-ink-dim text-xs mt-1">Please check back later.</p>
-                  </div>
-                  <div className="w-2 h-4 bg-accent animate-pulse"></div>
-                </div>
-
-              </div>
-            </motion.div>
-
           </div>
         </motion.div>
       </div>
