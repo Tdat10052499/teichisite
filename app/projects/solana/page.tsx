@@ -195,26 +195,54 @@ export default function SolanaProjects() {
                   <a href="#" className="w-10 h-10 flex items-center justify-center bg-surface border border-border/50 hover:border-[#14F195]/50 hover:text-[#14F195] transition-colors rounded-none">
                     <Code className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 flex items-center justify-center bg-surface border border-border/50 hover:border-[#14F195]/50 hover:text-[#14F195] transition-colors rounded-none">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
+                  <div className="group/soon relative h-10 w-10 hover:w-[130px] flex flex-shrink-0 items-center justify-center bg-surface border border-border/50 hover:border-red-500/50 hover:bg-red-500/10 hover:text-red-400 transition-all duration-300 ease-out rounded-none overflow-hidden cursor-not-allowed">
+                    <div className="absolute w-10 h-10 flex items-center justify-center transition-opacity duration-200 group-hover/soon:opacity-0">
+                      <ExternalLink className="w-5 h-5" />
+                    </div>
+                    <div className="absolute w-[130px] h-10 flex items-center justify-center whitespace-nowrap transition-opacity duration-200 opacity-0 group-hover/soon:opacity-100 text-xs font-mono">
+                      Coming soon...
+                    </div>
+                  </div>
                 </div>
               </div>
               
               <div className="mt-auto">
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Rust / Anchor</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Light SVM</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Kodama</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Next.js / React</span>
+                  <span className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-ink-dim rounded-none">Solana Kit</span>
                   <span className="px-3 py-1 bg-[#14F195]/10 border border-[#14F195]/20 text-xs font-mono text-[#14F195] rounded-none">[In development]</span>
                 </div>
                 <h3 className="text-3xl font-display font-semibold text-ink group-hover:text-[#14F195] transition-colors mb-2">
                   Trustless On-Chain Escrow Protocol
                 </h3>
-                <h4 className="text-xl font-mono text-ink-dim mb-3">
+                <h4 className="text-xl font-mono text-ink-dim mb-4">
                   Solana Escrow MVP
                 </h4>
-                <p className="text-ink-dim text-sm max-w-2xl line-clamp-2">
-                  A decentralized, trustless escrow smart contract on Solana. Facilitating secure token exchanges between two parties without intermediaries.
-                </p>
+                <div className="text-ink-dim text-sm max-w-2xl space-y-4">
+                  <p>
+                    <strong className="text-ink font-semibold">📝 Description:</strong><br/>
+                    This project is a decentralized escrow platform built on the Solana network. The smart contract acts as an unbiased, code-based third party, allowing two entities to securely exchange digital assets without needing to trust one another. By leveraging Program Derived Addresses (PDAs), the protocol ensures absolute transparency—no single entity holds the Private Key to the Vault, and assets are strictly released only when exact transaction conditions are met.
+                  </p>
+                  <p>
+                    <strong className="text-ink font-semibold">⚙️ Tech Stack:</strong><br/>
+                    The following tools were selected to optimize both performance and security for this project:<br/>
+                    <span className="block mt-1">
+                      • <strong className="text-white/80">Smart Contract:</strong> Rust combined with the Anchor Framework.
+                    </span>
+                    <span className="block mt-1">
+                      • <strong className="text-white/80">Testing:</strong> Light SVM (An ultra-lightweight Solana Virtual Machine simulator for blazing-fast local testing).
+                    </span>
+                    <span className="block mt-1">
+                      • <strong className="text-white/80">Client Generation:</strong> Kodama (Automatically generates a fully Type-safe TypeScript client from the IDL).
+                    </span>
+                    <span className="block mt-1">
+                      • <strong className="text-white/80">Frontend UI:</strong> Next.js, React, and Solana Kit (For seamless wallet and RPC connection management).
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
